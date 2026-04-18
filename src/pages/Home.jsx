@@ -74,7 +74,7 @@ const Hero = () => (
 );
 
 const Heritage = () => (
-  <section className="bg-surface-container-low pt-16 pb-16 px-12 overflow-hidden">
+  <section className="bg-surface-container-low pt-16 pb-16 px-6 md:px-12 overflow-hidden">
     <div className="max-w-[1920px] mx-auto grid lg:grid-cols-2 gap-24 items-center">
       <motion.div 
         initial={{ opacity: 0, x: -50 }}
@@ -101,7 +101,7 @@ const Heritage = () => (
           Crafting Exceptional <br className="hidden lg:block"/>Legacy Experiences
         </h2>
         <div className="space-y-6 text-on-surface-variant leading-loose">
-          <p>Appsulate began with a singular vision: to bridge the gap between architectural engineering and the visceral emotion of interior space. Over three decades, we have evolved into a global authority on curated habitats.</p>
+          <p>Square Concepts began with a singular vision: to bridge the gap between architectural engineering and the visceral emotion of interior space. Over three decades, we have evolved into a global authority on curated habitats.</p>
           <p>Our heritage is built on premium market insights and a relentless pursuit of perfection. We don't just design rooms; we engineer legacies that stand the test of temporal trends.</p>
         </div>
         <div className="mt-12 flex items-center gap-4 group cursor-pointer w-fit">
@@ -229,7 +229,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="pt-16 pb-32 px-12 bg-surface">
+    <section className="pt-16 pb-32 px-6 md:px-12 bg-surface">
       <div className="max-w-[1920px] mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -265,31 +265,31 @@ const Testimonials = () => {
     {
       name: "Marcus Aurelius",
       role: "Estate Owner",
-      text: "The precision of their spatial mapping is unmatched. My estate now feels like a living, breathing extension of my own intent.",
+      text: "Square Concepts provides unmatched precision in spatial mapping, making my estate feel like a living, breathing extension of my own intent.",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAn-QvN_8-M0y0Jp-i_kH8zL6_R9s-v_d-7y6R_D-9-z_P-p-p-p-p-p-p-p-p-p-p-p-p-p"
     },
     {
       name: "Sienna Miller",
       role: "Interior Enthusiast",
-      text: "Appsulate doesn't just design rooms; they engineer emotions. The modular kitchen is a technical marvel and a joy to use.",
+      text: "Square Concepts doesn't just design rooms; they engineer emotions. The modular kitchen is a technical marvel and a joy to use.",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAn-QvN_8-M0y0Jp-i_kH8zL6_R9s-v_d-7y6R_D-9-z_P-p-p-p-p-p-p-p-p-p-p-p-p-p"
     },
     {
       name: "David Chen",
       role: "Tech CEO",
-      text: "The integration of smart systems in the bedroom sanctuary has completely transformed my sleep cycles. True excellence.",
+      text: "Square Concepts' integration of smart systems in the bedroom sanctuary has completely transformed my sleep cycles. True excellence.",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAn-QvN_8-M0y0Jp-i_kH8zL6_R9s-v_d-7y6R_D-9-z_P-p-p-p-p-p-p-p-p-p-p-p-p-p"
     },
     {
       name: "Elena Rodriguez",
       role: "Art Curator",
-      text: "Their understanding of acoustic purity in the living gallery is exceptional. It's the perfect stage for my collection.",
+      text: "Square Concepts' understanding of acoustic purity in the living gallery is exceptional. It's the perfect stage for my collection.",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAn-QvN_8-M0y0Jp-i_kH8zL6_R9s-v_d-7y6R_D-9-z_P-p-p-p-p-p-p-p-p-p-p-p-p-p"
     },
     {
       name: "Julian Vane",
       role: "Architectural Critic",
-      text: "A masterclass in modern brutalism meets soft luxury. They have redefined the vocabulary of the contemporary home.",
+      text: "Square Concepts has redefined the vocabulary of the contemporary home through a masterclass in modern brutalism and soft luxury.",
       image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAn-QvN_8-M0y0Jp-i_kH8zL6_R9s-v_d-7y6R_D-9-z_P-p-p-p-p-p-p-p-p-p-p-p-p-p"
     }
   ];
@@ -303,7 +303,7 @@ const Testimonials = () => {
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        className="px-12 mb-16"
+        className="px-6 md:px-12 mb-16"
       >
         <span className="text-primary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Client Narratives</span>
         <h2 className="font-headline text-5xl text-on-surface">Voices of Excellence</h2>
@@ -318,7 +318,7 @@ const Testimonials = () => {
       >
         {extendedList.map((t, idx) => (
           <div key={idx} className="inline-block mx-6 whitespace-normal align-top shrink-0">
-            <div className="relative p-10 rounded-2xl shadow-sm border border-outline-variant/20 w-[350px] h-[350px] flex flex-col justify-between hover:shadow-xl transition-all duration-500 hover:-translate-y-2 overflow-hidden group">
+            <div className="relative p-10 rounded-2xl shadow-sm border border-outline-variant/20 w-[300px] md:w-[350px] h-[350px] flex flex-col justify-between hover:shadow-xl transition-all duration-500 hover:-translate-y-2 overflow-hidden group">
               {/* Background Logo Image from bg.logo.png - appears on hover */}
               <div 
                 className="absolute inset-0 z-0 opacity-0 group-hover:opacity-40 transition-opacity duration-500"
@@ -333,7 +333,12 @@ const Testimonials = () => {
               <div className="absolute inset-0 z-[1] bg-surface/80 group-hover:bg-surface/70 transition-colors duration-500"></div>
               {/* Content */}
               <p className="relative z-10 text-lg font-body text-on-surface leading-relaxed italic line-clamp-5">
-                "{t.text}"
+                " {t.text.split('Square Concepts').map((part, i, arr) => (
+                  <React.Fragment key={i}>
+                    {part}
+                    {i < arr.length - 1 && <span className="text-primary font-bold not-italic">Square Concepts</span>}
+                  </React.Fragment>
+                ))} "
               </p>
               <div className="relative z-10 flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -353,7 +358,7 @@ const Testimonials = () => {
 };
 
 const AboutUs = () => (
-  <section className="py-24 px-12 bg-surface overflow-hidden">
+  <section className="py-24 px-6 md:px-12 bg-surface overflow-hidden">
     <div className="max-w-[1920px] mx-auto grid lg:grid-cols-2 gap-24 items-center">
       <motion.div
         initial={{ opacity: 0, x: -30 }}
@@ -520,7 +525,7 @@ const VideoShowcase = () => {
 
   return (
     <section className="pt-24 pb-16 bg-surface-container-low overflow-hidden">
-      <div className="px-12 mb-16">
+      <div className="px-6 md:px-12 mb-16">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -30,7 +30,7 @@ const Hero = () => (
       <div className="absolute inset-0 bg-black/60 mix-blend-multiply"></div>
     </div>
     <motion.div 
-      className="relative z-10 px-12 lg:px-32 w-full flex flex-col items-end text-right"
+      className="relative z-10 px-6 md:px-12 lg:px-32 w-full flex flex-col items-end text-right"
       initial="initial"
       animate="animate"
       variants={staggerContainer}
@@ -42,7 +42,7 @@ const Hero = () => (
         Architectural Curator
       </motion.p>
       <motion.h1 
-        className="text-display-lg lg:text-[5.5rem] font-serif leading-[1.1] tracking-tight text-gray-200 mb-8"
+        className="text-4xl md:text-5xl lg:text-[5.5rem] font-serif leading-[1.1] tracking-tight text-gray-200 mb-8"
         variants={fadeInUp}
       >
         <span className="text-primary">Structural Integrity</span> <br/>
@@ -53,7 +53,7 @@ const Hero = () => (
         variants={fadeInUp}
       >
         <p className="text-lg leading-relaxed text-gray-300 font-body">
-          At Appsulate, we don't just design spaces; we curate habitats that breathe. Our philosophy merges the rigorous precision of engineering with the tactile poetry of high-end interior craft.
+          At Square Concepts, we don't just design spaces; we curate habitats that breathe. Our philosophy merges the rigorous precision of engineering with the tactile poetry of high-end interior craft.
         </p>
       </motion.div>
     </motion.div>
@@ -65,14 +65,14 @@ const Hero = () => (
     >
       <div className="flex items-center gap-4">
         <div className="h-px w-24 bg-white/50"></div>
-        <span className="font-serif italic text-white/80">Est. 1994</span>
+        <span className="font-serif italic text-white/80">Est. 2023</span>
       </div>
     </motion.div>
   </section>
 );
 
 const Heritage = () => (
-  <section className="py-16 px-12 lg:px-32 bg-surface-container-low">
+  <section className="py-16 px-6 md:px-12 lg:px-32 bg-surface-container-low">
     <div className="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
       <motion.div 
         className="lg:col-span-5 relative"
@@ -119,7 +119,7 @@ const Heritage = () => (
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          Three Decades of <br/>Curated Evolution
+          A Journey of <br/>Curated Evolution
         </motion.h2>
         <div className="space-y-8 text-on-surface-variant leading-loose">
           <motion.p 
@@ -129,7 +129,7 @@ const Heritage = () => (
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           >
-            Appsulate began in 1994 as a boutique structural engineering firm. Our founders believed that the soul of a building should be as robust as its skeleton. This technical obsession eventually blossomed into a holistic vision for interior environments.
+            Square Concepts began in 2023 as a boutique structural engineering firm. Our founders believed that the soul of a building should be as robust as its skeleton. This technical obsession eventually blossomed into a holistic vision for interior environments.
           </motion.p>
           <motion.p 
             className="text-lg"
@@ -138,7 +138,7 @@ const Heritage = () => (
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           >
-            By the early 2000s, we shifted our focus from the "how" to the "why," evolving into an architectural interior studio that prioritizes human experience over mere utility. Today, we stand as curators of light, space, and materiality.
+            By early 2026, we shifted our focus from the "how" to the "why," evolving into an architectural interior studio that prioritizes human experience over mere utility. Today, we stand as curators of light, space, and materiality.
           </motion.p>
           <motion.div 
             className="pt-8"
@@ -159,7 +159,7 @@ const Heritage = () => (
 );
 
 const Pillars = () => (
-  <section className="pt-16 pb-32 px-12 lg:px-32 bg-background">
+  <section className="pt-16 pb-32 px-6 md:px-12 lg:px-32 bg-background">
     <div className="max-w-[1920px] mx-auto">
       <motion.div 
         className="mb-24 text-center"
@@ -225,7 +225,7 @@ const Pillars = () => (
 );
 
 const Team = () => (
-  <section className="pt-16 pb-32 px-12 lg:px-32 bg-surface-container-high overflow-hidden">
+  <section className="pt-16 pb-32 px-6 md:px-12 lg:px-32 bg-surface-container-high overflow-hidden">
     <div className="max-w-[1920px] mx-auto">
       <motion.div 
         className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-8"
@@ -315,7 +315,7 @@ const About = () => {
       <Pillars />
       <Team />
       <motion.section 
-        className="py-24 px-12 lg:px-32 relative overflow-hidden bg-primary"
+        className="py-24 px-6 md:px-12 lg:px-32 relative overflow-hidden bg-primary"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}

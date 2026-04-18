@@ -257,13 +257,13 @@ const Services = () => {
             variants={fadeInUp}
           >
             Transform your home with <br/>
-            <span className="text-primary italic font-serif">Appsulate today!</span>
+            <span className="text-primary italic font-serif">Square Concepts today!</span>
           </motion.h2>
           <motion.p 
             className="text-stone-400 text-lg max-w-2xl mx-auto mb-12"
             variants={fadeInUp}
           >
-            Partner with Appsulate Concepts to create a home that reflects your style and needs.
+            Partner with Square Concepts to create a home that reflects your style and needs.
           </motion.p>
           <motion.form 
             className="flex flex-col md:flex-row gap-4 max-w-xl mx-auto"

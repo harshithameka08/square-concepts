@@ -7,7 +7,7 @@ const Footer = () => (
     <div className="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 font-sans text-sm tracking-wide">
       {/* Branding Side */}
       <div className="lg:col-span-5 max-w-sm flex flex-col items-start text-left">
-        <img src={logo} alt="Square Concepts" className="h-12 w-auto object-contain mb-5" />
+        <img src={logo} alt="Square Concepts" className="h-[72px] w-auto object-contain mb-5" />
         <p className="text-[#C8E6C9] leading-relaxed text-sm italic mb-6">
           "Curating architectural habitats where precision meets humanity. Crafted with intent since 1994."
         </p>

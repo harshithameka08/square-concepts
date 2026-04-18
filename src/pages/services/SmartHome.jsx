@@ -296,7 +296,7 @@ const IntuitiveScenes = () => (
             transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
             <h3 className="font-headline text-2xl mb-4">The Command Center</h3>
-            <p className="text-on-surface-variant mb-6 italic text-sm">"Atelier Appsulate systems learn from your behavior, suggesting scenes before you even reach for the wall panel."</p>
+            <p className="text-on-surface-variant mb-6 italic text-sm">"Atelier Square Concepts systems learn from your behavior, suggesting scenes before you even reach for the wall panel."</p>
             <motion.div 
               className="flex gap-4"
               initial="initial"

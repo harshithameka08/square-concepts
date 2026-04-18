@@ -151,7 +151,7 @@ const StudioDetails = () => (
       >
         <div>
           <h3 className="text-sm font-bold text-on-surface-variant uppercase tracking-wider mb-2">Connect</h3>
-          <p className="font-body text-on-surface text-lg">hello@appsulate.design</p>
+          <p className="font-body text-on-surface text-lg">hello@squareconcepts.design</p>
           <p className="font-body text-on-surface text-lg">+91 9010106877</p>
         </div>
         <div>
