@@ -9,7 +9,7 @@ const Footer = () => (
       <div className="lg:col-span-5 max-w-sm flex flex-col items-start text-left">
         <img src={logo} alt="Square Concepts" className="h-[72px] w-auto object-contain mb-5" />
         <p className="text-[#C8E6C9] leading-relaxed text-sm italic mb-6">
-          "Curating architectural habitats where precision meets humanity. Crafted with intent since 1994."
+          "Curating architectural habitats where precision meets humanity. Crafted with intent since 2023."
         </p>
         {/* Social Media Icons */}
         <div className="flex items-center gap-6">

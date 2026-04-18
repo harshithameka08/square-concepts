@@ -32,7 +32,7 @@ const Hero = () => (
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
       />
-      <div className="absolute inset-0 bg-black/50 backdrop-brightness-75"></div>
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
     </div>
 
     <motion.div 
@@ -43,20 +43,20 @@ const Hero = () => (
     >
       <motion.h1 
         variants={fadeInUp}
-        className="font-serif text-3xl md:text-5xl lg:text-[4.5rem] tracking-[0.05em] text-white leading-[1.2] mb-10"
+        className="font-serif text-3xl md:text-5xl lg:text-6xl tracking-[0.02em] text-white leading-tight mb-8 drop-shadow-2xl"
       >
         <span className="text-primary">Elevate Your Space with</span> <br/>
         <span className="italic font-light text-stone-300">Architectural Precision</span>
       </motion.h1>
       <motion.p 
         variants={fadeInUp}
-        className="text-lg md:text-xl text-stone-300 max-w-2xl mb-12 leading-relaxed font-light"
+        className="text-lg md:text-xl text-stone-300 max-w-2xl mb-12 leading-relaxed font-light opacity-90"
       >
         A dialogue between organic warmth and structural integrity. We curate bespoke environments that balance industrial precision with the poetry of fine living.
       </motion.p>
       <motion.div 
         variants={fadeInUp}
-        className="flex flex-wrap justify-center gap-6"
+        className="flex flex-wrap justify-center gap-6 mb-20"
       >
         <Link to="/projects">
           <button className="bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-4 rounded-md font-bold tracking-wide uppercase text-sm shadow-xl shadow-primary/20 hover:scale-105 transition-transform active:scale-95">
@@ -96,12 +96,12 @@ const Heritage = () => (
         transition={{ duration: 0.8 }}
         className="order-1 lg:order-2"
       >
-        <span className="text-primary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Est. 1994</span>
+        <span className="text-primary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Est. 2023</span>
         <h2 className="font-headline text-4xl md:text-[3.5rem] text-on-surface mb-10 leading-[1.35] tracking-wide">
           Crafting Exceptional <br className="hidden lg:block"/>Legacy Experiences
         </h2>
         <div className="space-y-6 text-on-surface-variant leading-loose">
-          <p>Square Concepts began with a singular vision: to bridge the gap between architectural engineering and the visceral emotion of interior space. Over three decades, we have evolved into a global authority on curated habitats.</p>
+          <p>Square Concepts began with a singular vision: to bridge the gap between architectural engineering and the visceral emotion of interior space. Since our inception, we have evolved into a global authority on curated habitats.</p>
           <p>Our heritage is built on premium market insights and a relentless pursuit of perfection. We don't just design rooms; we engineer legacies that stand the test of temporal trends.</p>
         </div>
         <div className="mt-12 flex items-center gap-4 group cursor-pointer w-fit">
@@ -371,7 +371,7 @@ const AboutUs = () => (
           Redesigning the <br className="hidden lg:block"/>Vocabulary of Home
         </h2>
         <div className="space-y-6 text-on-surface-variant leading-loose font-body text-lg">
-          <p>At Square Concepts, we view interior design as an architectural dialogue between the inhabitant and the environment. Since 1994, our studio has been dedicated to the pursuit of spatial purity—stripping away the superfluous to reveal the essential beauty of form and function.</p>
+          <p>At Square Concepts, we view interior design as an architectural dialogue between the inhabitant and the environment. Since 2023, our studio has been dedicated to the pursuit of spatial purity—stripping away the superfluous to reveal the essential beauty of form and function.</p>
           <p>Our multidisciplinary team of architects and designers collaborate to engineer environments that are bio-rhythmically synchronized with your life. We don't just design rooms; we curate legacies.</p>
         </div>
         <div className="mt-12 grid grid-cols-2 gap-8 border-t border-outline-variant/30 pt-12">
@@ -381,8 +381,8 @@ const AboutUs = () => (
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <h4 className="text-4xl font-headline text-primary mb-2">30+</h4>
-            <p className="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Years of Precision</p>
+            <h4 className="text-4xl font-headline text-primary mb-2">Modern</h4>
+            <p className="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Architecture</p>
           </motion.div>
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
