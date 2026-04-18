@@ -26,7 +26,7 @@ const ContactHeader = () => (
       <img 
         className="w-full h-full object-cover"
         alt="Interior Design Background"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsyPwy5QtZG76xBEqMm1oQ0ZsrrfYkPS_YSB0SC1v9QLdvBBn30gx_V5Yqnnx4TeVUSj6YImx8cmwCY7DiQik2-Ck3EiKJVM6CpOTN-ZVeMozwC1KvJcITATbOLsZV4teOVUuuedrUjezx9DDF4qSKwJPvhliNQ6bAKHnMSn-dCNzjhgHIDvdHv1wzCnMYvLe5pbahT32eZMWiHpfw4LykWGql-L1m_JJABhGrFAYdG9O3n_6Kre1arcy-2ZaKDDh8sEQuqUtyW38W"
+        src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2000"
       />
     </motion.div>
     <div className="absolute inset-0 bg-stone-900/40 backdrop-brightness-75"></div>

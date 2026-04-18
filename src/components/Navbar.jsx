@@ -13,7 +13,6 @@ const Navbar = () => (
           { name: 'Home', path: '/' },
           { name: 'Services', path: '/services' },
           { name: 'Projects', path: '/projects' },
-          { name: 'Portfolio', path: '/portfolio' },
           { name: 'About', path: '/about' },
           { name: 'Contact', path: '/contact' },
         ].map((link) => (

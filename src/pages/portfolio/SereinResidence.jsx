@@ -11,7 +11,7 @@ const fadeInUp = {
 const Hero = () => (
   <section className="relative h-[70vh] flex items-end overflow-hidden">
     <div className="absolute top-8 left-8 md:top-12 md:left-12 z-50">
-      <Link to="/portfolio" className="text-white hover:text-primary hover:-translate-x-2 transition-all inline-block drop-shadow-lg">
+      <Link to="/projects" className="text-white hover:text-primary hover:-translate-x-2 transition-all inline-block drop-shadow-lg">
         <span className="material-symbols-outlined text-4xl">arrow_back</span>
       </Link>
     </div>
@@ -19,9 +19,9 @@ const Hero = () => (
       <img 
         className="w-full h-full object-cover"
         alt="Serein Residence"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq1rDYL5ptDZHxSkC2UeX9jdJzm3EwnnkSHpfixjEB1npxWJKg2M8zWBJkTZEzx2GIv3p2sQzjrWPRmoRAgaB7FC9uVQ6-du1bmvz-uZlkaVca1Z77qJRqpUUQf9YhsfmoNEZJPKNvX3dpqYfGVh_xgsl1O-2MWKeclY7O435AXvpWtcwHgIsqP7PytzH7xaN_2ShYWLkEKWgj5b1RLh6QyNX_vZWxjnuCeNZwM_PWs_yYu5LAHOr15Hl3e4ROupWjkHA_21uI6sSB"
+        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20"></div>
     </div>
     <motion.div 
       className="relative z-10 px-8 lg:px-16 pb-16 w-full flex flex-col items-center text-center"

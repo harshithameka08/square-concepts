@@ -11,7 +11,7 @@ const fadeInUp = {
 const Hero = () => (
   <section className="relative h-[70vh] flex items-end overflow-hidden">
     <div className="absolute top-8 left-8 md:top-12 md:left-12 z-50">
-      <Link to="/portfolio" className="text-white hover:text-primary hover:-translate-x-2 transition-all inline-block drop-shadow-lg">
+      <Link to="/projects" className="text-white hover:text-primary hover:-translate-x-2 transition-all inline-block drop-shadow-lg">
         <span className="material-symbols-outlined text-4xl">arrow_back</span>
       </Link>
     </div>
@@ -19,9 +19,9 @@ const Hero = () => (
       <img 
         className="w-full h-full object-cover"
         alt="The Culinaire Studio"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbBgS4NhHn9SQWZ5yJrKvIYxXWvCufGLfrN6J_ncd8EXcqk394gZFla4to0OJy7vhDyoeP2dp5IAS7m_vBNAQ0mAym4ihrAdAKLWhnRUMlQvzBHh4UCdqeVxj4ydEFjLDD8eQlMzguy3nFaziuSUtIvIp1m1GQvx2m48Kw1hp3szAEFhfa6Nzso3j2X3Ajj2jAyFl5xRHw01IskR5g2_loZJcLAO6Ehjzrl70PYQrZSn3fYUT6HB5GdzPhjqTHcL-TGc3eCVDbR0TK"
+        src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=2000"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20"></div>
     </div>
     <motion.div 
       className="relative z-10 px-8 lg:px-16 pb-16 w-full flex flex-col items-center text-center"

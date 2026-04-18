@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import obsidianHeroBg from '../../assets/hero/obsidian-penthouse-hero.png';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -11,7 +12,7 @@ const fadeInUp = {
 const Hero = () => (
   <section className="relative h-[70vh] flex items-end overflow-hidden">
     <div className="absolute top-8 left-8 md:top-12 md:left-12 z-50">
-      <Link to="/portfolio" className="text-white hover:text-primary hover:-translate-x-2 transition-all inline-block drop-shadow-lg">
+      <Link to="/projects" className="text-white hover:text-primary hover:-translate-x-2 transition-all inline-block drop-shadow-lg">
         <span className="material-symbols-outlined text-4xl">arrow_back</span>
       </Link>
     </div>
@@ -19,7 +20,7 @@ const Hero = () => (
       <img 
         className="w-full h-full object-cover"
         alt="The Obsidian Penthouse"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkqDclWgxznx2rRqyt4M1lnsLRt25_WKGF-nr14AJROr7YG3duafeg19yt2_034taZ89i_LphG6yOd8bMURWruDj24xtTY_q-jWZIYvCQTZWVCVj3DmOYqxCGrTGJCEjcaGQ7kZe494ey5C9hFtq29VlTGvDzzkvV5FY1luPxvylE0UBgyBFWz3a12QfZWGDahYCzyU_eXlhXGDRuQ7UQS8tor-Y9VwDyTByEgs818EzKSqW9DHnFjiEmY1S5067TKgavxxVFFLmzp"
+        src={obsidianHeroBg}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
     </div>
@@ -29,7 +30,7 @@ const Hero = () => (
       animate="animate"
       variants={fadeInUp}
     >
-      <span className="text-primary font-extrabold tracking-[0.2em] uppercase text-sm mb-4 block drop-shadow-lg">Residential • Manhattan</span>
+      <span className="text-primary font-extrabold tracking-[0.2em] uppercase text-sm mb-4 block drop-shadow-lg">Residential • Reykjavík</span>
       <h1 className="text-5xl md:text-7xl font-headline tracking-tighter text-white drop-shadow-xl">The Obsidian Penthouse</h1>
       <div className="flex flex-wrap justify-center gap-8 md:gap-16 mt-8 pt-8 border-t border-white/20">
         <div className="text-center">
@@ -38,7 +39,7 @@ const Hero = () => (
         </div>
         <div className="text-center">
           <span className="text-xs font-bold uppercase tracking-widest text-primary block mb-1">Location</span>
-          <span className="text-white text-sm md:text-base drop-shadow-md">Manhattan, NYC</span>
+          <span className="text-white text-sm md:text-base drop-shadow-md">Reykjavík, Iceland</span>
         </div>
         <div className="text-center">
           <span className="text-xs font-bold uppercase tracking-widest text-primary block mb-1">Client</span>
@@ -58,12 +59,12 @@ const ProjectDetails = () => (
         viewport={{ once: true }}
         transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
       >
-        <h2 className="text-3xl font-headline mb-6">A Study in Dark Luxury</h2>
+        <h2 className="text-3xl font-headline mb-6">A Study in Nordic Minimalism</h2>
         <p className="text-on-surface-variant leading-relaxed mb-6">
-          Perched high above the Manhattan skyline, The Obsidian Penthouse represents a monolithic exploration of dark materials and shadow play. Designed to contrast with the ethereal Arctic light, this space embraces the drama of deep tones and rich textures.
+          Perched on the edge of the North Atlantic, The Obsidian Penthouse represents a monolithic exploration of volcanic materials and light play. Designed to harmonize with the ethereal Arctic light and the rugged Icelandic landscape, this space embraces the drama of deep tones and natural textures.
         </p>
         <p className="text-on-surface-variant leading-relaxed mb-8">
-          Every surface tells a story of meticulous craftsmanship—from the hand-selected marble to the custom-milled dark oak paneling. The result is a sanctuary that feels both intimate and infinitely expansive.
+          Every surface tells a story of meticulous craftsmanship—from the local basalt stone to the custom-milled smoked oak paneling. The result is a sanctuary that feels both grounded in the earth and infinitely open to the surrounding natural wonders.
         </p>
         <div className="grid grid-cols-2 gap-8 border-t border-outline-variant/30 pt-8">
           <div>
@@ -76,7 +77,7 @@ const ProjectDetails = () => (
           </div>
           <div>
             <span className="text-xs font-bold uppercase tracking-widest text-primary block mb-2">Location</span>
-            <span className="text-on-surface text-lg">Manhattan, NYC</span>
+            <span className="text-on-surface text-lg">Reykjavík, Iceland</span>
           </div>
           <div>
             <span className="text-xs font-bold uppercase tracking-widest text-primary block mb-2">Type</span>

@@ -21,13 +21,13 @@ const Hero = () => (
     <div className="absolute inset-0 z-0">
       <motion.img 
         className="w-full h-full object-cover" 
-        alt="ultra-minimalist luxury interior" 
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXXcex6K_iie5UIoRMH8Y7h0f5rt60SKnvlFwgtMKsgFSGgXVcbZC6eTbZy7MPiBDlQTRRweVTbJxmitmpfnnWt1cT2mESaiKHQfBaoJXRcuLWlOw5_5Jvj0fV7Jc7EGh2BdhC9Os3NYSWqJ2ot_27bNAXmxHq8hXmBLCL48OQaZI87YM1-YXCf9OHeyJDhQHf-_uTLnvVcr7MpBNftSZBw3NHjWmpugoGHj9eoWhV54z9gocE6TDAreYuECyAPwCbx1PgmlPIFbq1"
+        alt="elegant dark minimalist architectural interior" 
+        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000"
         initial={{ scale: 1.1, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
       />
-      <div className="absolute inset-0 bg-background/30 mix-blend-multiply"></div>
+      <div className="absolute inset-0 bg-black/60 mix-blend-multiply"></div>
     </div>
     <motion.div 
       className="relative z-10 px-12 lg:px-32 w-full flex flex-col items-end text-right"
@@ -45,7 +45,7 @@ const Hero = () => (
         className="text-display-lg lg:text-[5.5rem] font-serif leading-[1.1] tracking-tight text-gray-200 mb-8"
         variants={fadeInUp}
       >
-        Structural Integrity <br/>
+        <span className="text-primary">Structural Integrity</span> <br/>
         <span className="italic font-light text-gray-300">Organic Warmth</span>
       </motion.h1>
       <motion.div 

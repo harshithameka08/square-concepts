@@ -7,7 +7,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Projects from './pages/Projects';
-import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import ModularKitchen from './pages/services/ModularKitchen';
 import CustomWardrobe from './pages/services/CustomWardrobe';
@@ -36,7 +35,6 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/services/modular-kitchen" element={<ModularKitchen />} />
             <Route path="/services/custom-wardrobe" element={<CustomWardrobe />} />

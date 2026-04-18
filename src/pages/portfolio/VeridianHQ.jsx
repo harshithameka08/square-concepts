@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import veridianHeroBg from '../../assets/hero/veridian-hq-hero.png';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -11,7 +12,7 @@ const fadeInUp = {
 const Hero = () => (
   <section className="relative h-[70vh] flex items-end overflow-hidden">
     <div className="absolute top-8 left-8 md:top-12 md:left-12 z-50">
-      <Link to="/portfolio" className="text-white hover:text-primary hover:-translate-x-2 transition-all inline-block drop-shadow-lg">
+      <Link to="/projects" className="text-white hover:text-primary hover:-translate-x-2 transition-all inline-block drop-shadow-lg">
         <span className="material-symbols-outlined text-4xl">arrow_back</span>
       </Link>
     </div>
@@ -19,9 +20,9 @@ const Hero = () => (
       <img 
         className="w-full h-full object-cover"
         alt="Veridian HQ"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWWxE2BqbGItOBIrzjIi4afdK1Mwx7Epv6By_7kJ6iS2AJ2DvB_Bs3DKrGg_zjWo39HfLNH1tWfLZF1R_mvxEcgpMA1TiDvu-8ykBBoIR8LSaS0u9Ty4K60vcGHOs7LkkTElAiEwQH57JRO43KyZf2BXNBXjE_5oX4kL635u4tDmIxxuOn9kgX1ykr1D83mW-E08TDRb8AT5rSjgcryC-pn8orDg4DExnbXBosKMeavrQp_-sYzWNObFtYur3cRJohkT46g12UoQf3"
+        src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20"></div>
     </div>
     <motion.div 
       className="relative z-10 px-8 lg:px-16 pb-16 w-full flex flex-col items-center text-center"

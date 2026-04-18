@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import servicesHeroBg from '../assets/hero/services-hero.png';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -21,7 +22,7 @@ const Hero = () => (
     <img 
       alt="Modern Interior Architecture" 
       className="absolute inset-0 w-full h-full object-cover" 
-      src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000"
+      src={servicesHeroBg}
     />
     <div className="absolute inset-0 bg-stone-900/60 backdrop-brightness-75"></div>
     <motion.div 
@@ -34,7 +35,7 @@ const Hero = () => (
         className="text-5xl md:text-7xl font-bold tracking-tighter text-white mb-6 uppercase"
         variants={fadeInUp}
       >
-        Our Services
+        Our <span className="text-primary">Services</span>
       </motion.h1>
       <motion.p 
         className="text-stone-300 text-lg md:text-xl leading-relaxed mb-10 font-light"
@@ -56,23 +57,50 @@ const Hero = () => (
 const ServiceCard = ({ img, title, desc, path, index }) => (
   <motion.div
     layout
-    initial={{ opacity: 0, scale: 0.9 }}
-    animate={{ opacity: 1, scale: 1 }}
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, scale: 0.9 }}
-    transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+    transition={{ duration: 0.6, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
     className="h-full"
   >
-    <Link to={path || '#'} className="group block h-full bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/15 transition-all hover:shadow-2xl hover:shadow-primary/5 flex flex-col">
-      <div className="aspect-[4/3] overflow-hidden shrink-0">
+    <Link to={path || '#'} className="group block h-full relative rounded-2xl overflow-hidden cursor-pointer">
+      {/* Image Background */}
+      <div className="aspect-[4/5] overflow-hidden">
         <img 
           alt={title} 
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-[0.4] brightness-[0.55]" 
           src={img}
         />
       </div>
-      <div className="p-8 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold mb-4 tracking-tight group-hover:text-primary transition-colors">{title}</h3>
-        <p className="text-on-surface-variant font-light leading-relaxed line-clamp-3 text-sm">{desc}</p>
+
+      {/* Permanent overlay gradient */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+      {/* Index number */}
+      <div className="absolute top-6 right-6 z-10">
+        <span className="text-white/20 text-6xl font-serif font-bold group-hover:text-primary/40 transition-colors duration-500">
+          {String(index + 1).padStart(2, '0')}
+        </span>
+      </div>
+
+      {/* Content - always visible at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
+        <div className="flex items-center gap-2 mb-3">
+          <div className="w-8 h-[2px] bg-primary group-hover:w-12 transition-all duration-500"></div>
+          <span className="text-primary text-[10px] font-bold uppercase tracking-[0.25em]">Service</span>
+        </div>
+        <h3 className="text-xl font-serif text-white mb-3 group-hover:text-primary transition-colors duration-300">{title}</h3>
+        
+        {/* Description - slides up on hover */}
+        <div className="max-h-0 overflow-hidden group-hover:max-h-24 transition-all duration-500 ease-out">
+          <p className="text-stone-400 text-sm leading-relaxed font-light">{desc}</p>
+        </div>
+
+        {/* Arrow CTA */}
+        <div className="flex items-center gap-2 mt-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
+          <span className="text-primary text-xs font-bold uppercase tracking-widest">Explore</span>
+          <span className="material-symbols-outlined text-primary text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </div>
       </div>
     </Link>
   </motion.div>
@@ -148,14 +176,15 @@ const Services = () => {
       <Hero />
       
       {/* Search & Grid Navigation */}
-      <section className="max-w-screen-2xl mx-auto px-8 pb-32 pt-8">
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-4 mb-6 relative z-20 border-b border-outline-variant/30 pb-6">
+      <section className="max-w-screen-2xl mx-auto px-8 pb-32 pt-12">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-12 relative z-20">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-headline font-bold text-on-surface tracking-tighter">Our Expertise</h2>
+            <span className="text-primary text-[11px] font-bold uppercase tracking-[0.3em] mb-4 block">What We Do</span>
+            <h2 className="text-4xl md:text-6xl font-serif text-on-surface tracking-tight leading-[1.1]">Our <span className="italic font-light text-on-surface-variant">Expertise</span></h2>
           </motion.div>
           
           <div className="flex flex-col items-start lg:items-end gap-3 w-full lg:w-auto">
@@ -184,7 +213,7 @@ const Services = () => {
         </div>
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           layout
         >
           <AnimatePresence mode="popLayout">

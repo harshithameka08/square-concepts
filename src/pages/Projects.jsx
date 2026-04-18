@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import projectsHeroBg from '../assets/hero/projects-hero.png';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -26,7 +28,7 @@ const Hero = () => (
       <img 
         className="w-full h-full object-cover"
         alt="Architectural Projects Background"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYFb08wyGDeEgABooCknmiIyNkXBgkeQtvHBNYg33RYKWAxml4fjqerLvgiN_aXYLEnTctyWFvVxY6joRrNTGRu-UlaaCE0xRMTCTIl2y5gskjFsRtXChnddQfXYZzXlWkwU1kwimAZ3qCnbzuto_8ObOQEvJhuOjveNsA9k_-sMWAhQEFlHN_klbARITEyQi-GKB0x9Qt6P2QNqIe7YAPWce-z5z8qIuGDki1xruu9V5aKIWYGzGP8wzvcUL5Kei-GSEyCZ-wyLzz"
+        src={projectsHeroBg}
       />
     </motion.div>
     <div className="absolute inset-0 bg-stone-900/40 backdrop-brightness-75"></div>
@@ -41,7 +43,7 @@ const Hero = () => (
         className="text-5xl md:text-7xl font-bold tracking-tighter text-white mb-6 uppercase"
         variants={fadeInUp}
       >
-        Our Projects
+        Our <span className="text-primary">Projects</span>
       </motion.h1>
       <motion.p 
         className="text-stone-300 text-lg md:text-xl leading-relaxed mb-10 font-light"
@@ -93,10 +95,10 @@ const FilterBar = ({ activeFilter, setFilter }) => (
   </motion.section>
 );
 
-const ProjectCard = ({ title, location, desc, img, stats, colSpan, mt, aspect, index, category }) => (
+const ProjectCard = ({ title, location, desc, img, stats, colSpan, mt, aspect, index, category, path }) => (
   <motion.article 
     layout
-    className={`${colSpan} group ${mt || ''} relative cursor-pointer`}
+    className={`${colSpan} group ${mt || ''} relative`}
     initial={{ opacity: 0, scale: 0.9 }}
     animate={{ opacity: 1, scale: 1 }}
     exit={{ opacity: 0, scale: 0.9 }}
@@ -106,6 +108,7 @@ const ProjectCard = ({ title, location, desc, img, stats, colSpan, mt, aspect, i
       ease: [0.22, 1, 0.36, 1] 
     }}
   >
+    <Link to={path} className="block group cursor-pointer">
     <div className={`relative overflow-hidden ${aspect} rounded-lg bg-surface-container`}>
       <motion.img 
         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
@@ -147,6 +150,7 @@ const ProjectCard = ({ title, location, desc, img, stats, colSpan, mt, aspect, i
       <h3 className="text-2xl font-headline tracking-tight group-hover:text-primary transition-colors">{title}</h3>
       <p className="text-stone-500 text-sm font-body uppercase tracking-[0.15em] mt-1">{location}</p>
     </div>
+    </Link>
   </motion.article>
 );
 
@@ -160,7 +164,8 @@ const projects = [
     stats: { year: 2023, area: "4,500 SQ. FT." },
     category: "Residential",
     colSpan: "md:col-span-6",
-    aspect: "aspect-video"
+    aspect: "aspect-video",
+    path: "/portfolio/obsidian-penthouse"
   },
   {
     id: 2,
@@ -171,7 +176,8 @@ const projects = [
     stats: { year: 2022, area: "12,000 SQ. FT." },
     category: "Commercial",
     colSpan: "md:col-span-6",
-    aspect: "aspect-video"
+    aspect: "aspect-video",
+    path: "/portfolio/veridian-hq"
   },
   {
     id: 3,
@@ -182,7 +188,8 @@ const projects = [
     stats: { year: 2024, area: "3,200 SQ. FT." },
     category: "Residential",
     colSpan: "md:col-span-6",
-    aspect: "aspect-video"
+    aspect: "aspect-video",
+    path: "/portfolio/serein-residence"
   },
   {
     id: 4,
@@ -193,7 +200,8 @@ const projects = [
     stats: { year: 2021, area: "1,800 SQ. FT." },
     category: "Renovation",
     colSpan: "md:col-span-6",
-    aspect: "aspect-video"
+    aspect: "aspect-video",
+    path: "/portfolio/the-culinaire-studio"
   }
 ];
 
@@ -219,6 +227,7 @@ const ProjectGrid = ({ activeFilter }) => {
                 aspect={project.aspect}
                 index={index}
                 category={project.category}
+                path={project.path}
               />
             ))
           ) : (
