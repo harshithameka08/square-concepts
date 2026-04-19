@@ -359,10 +359,6 @@ const About = () => {
             <Link to="/contact" className="bg-white text-primary px-10 py-4 rounded-md font-bold text-base tracking-widest uppercase hover:bg-surface transition-all shadow-xl shadow-black/10">
               Inquire Now
             </Link>
-            <Link to="/portfolio" className="text-on-primary font-bold flex items-center gap-2 group hover:gap-4 transition-all">
-              View Our Portfolio
-              <span className="material-symbols-outlined">north_east</span>
-            </Link>
           </motion.div>
         </div>
       </motion.section>
